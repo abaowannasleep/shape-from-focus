@@ -27,4 +27,6 @@ a = y1 - b.*x1 - c.*x1.^2;
 s = sqrt(-1./(2*c));
 u = b.*s.^2;
 A = exp(a + u.^2./(2*s.^2));
+u(u>max(x)) = max(x);
+u(u<min(x)) = min(x);
 end
