@@ -17,7 +17,7 @@ for k = 1:imgNum
     Image = images(:,:,k);
     U = imfilter(Image, MEANF, 'replicate');
     FM= (Image-U).^2;
-%     FM = imfilter(FM, MEANF, 'replicate'); 
+    FM = imfilter(FM, MEANF, 'replicate'); 
     FMs(:, :, k) = FM;
 end
 if smoothSize
